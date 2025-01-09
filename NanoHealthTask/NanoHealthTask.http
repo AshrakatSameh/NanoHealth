@@ -1,0 +1,6 @@
+@NanoHealthTask_HostAddress = http://localhost:5145
+
+GET {{NanoHealthTask_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
