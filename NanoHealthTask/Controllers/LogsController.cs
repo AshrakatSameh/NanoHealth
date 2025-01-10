@@ -5,6 +5,7 @@ using NanoHealthTask.Models;
 
 namespace NanoHealthTask.Controllers
 {
+    [Authorize]
     [Route("api/v1/logs")]
     [ApiController]
     public class LogsController : ControllerBase
@@ -15,7 +16,7 @@ namespace NanoHealthTask.Controllers
         {
             _logService = logService;
         }
-
+        
         [HttpPost]
         public async Task<IActionResult> StoreLog([FromBody] LogEntryRequest logRequest)
         {
